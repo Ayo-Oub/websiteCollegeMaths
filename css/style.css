@@ -1,0 +1,121 @@
+/* Start global */
+:root {
+  --primary-color: #433878;
+  --secondary-color: #7e60bf;
+  --tertiary-color: #ffe1ff;
+  --quaternary-color: #f4f6ff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--quaternary-color);
+  color: var(--primary-color);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+/* End global */
+/* Start header */
+header {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  width: 41%;
+  justify-content: space-between;
+  font-weight: 600;
+}
+header h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+header a:hover {
+  border-bottom: 2px solid var(--secondary-color);
+  transition: 0.2s ease-in;
+}
+/* End header */
+/* Begin section */
+section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section .boxes {
+  /* display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 20px; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+section .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--secondary-color);
+  padding: 10px;
+  border-radius: 7px;
+}
+section .box h4 {
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+section .box h6,
+section .box p {
+  border-radius: 7px;
+  color: var(--primary-color);
+  padding: 2px 5px;
+  transition: 0.2s ease-out;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+section .box h6 a,
+section .box p a {
+  border-radius: 7px;
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
+  padding: 3px 8px;
+  transition: 0.2s ease-out;
+  font-size: 17px;
+  font-weight: 600;
+}
+section .box h6 a:hover,
+section .box p a:hover {
+  background-color: var(--primary-color);
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }}
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  section .boxes {
+    grid-template-columns: 1fr;
+  gap: 5px;
+  }
+}
